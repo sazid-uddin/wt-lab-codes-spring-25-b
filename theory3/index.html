@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        h1 {
+            color: red;
+            background-color: lightblue;
+        }
+
+        p {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        #p1 {
+            border: 1px solid black;
+            font-style: normal;
+        }
+
+        .aqua {
+            color: aquamarine;
+        }
+
+        div > p {
+            text-align: right;
+        }
+        div p {
+            background-color: yellow;
+        }
+
+		div + p {
+			background-color: red;
+		}
+
+		div ~ p {
+			border: 2px solid white;
+		}
+
+		p:hover {
+			color: brown;
+		}
+    </style>
+    <body>
+        <h1 class="aqua">CSS Demo</h1>
+        <p id="p1">Para 1</p>
+        <p id="p2" class="aqua">Para 2</p>
+        <p id="p3">Para 3</p>
+        <p id="p4" class="aqua">Para 4</p>
+		<a href="https://www.amazon.com">Amazon</a>
+        <div>
+            <h2>first div</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae voluptate commodi illum, voluptates cumque eaque amet reiciendis, quos animi repellendus recusandae rem ipsa architecto reprehenderit a ducimus voluptatum! Unde, ducimus.</p>
+        </div>
+		<p>Sibling Para</p>
+		<p>another Sibling Para</p>
+        <div>
+            <h2>2nd div</h2>
+            <p>Para on 2nd div</p>
+            <section>
+                <p>inner paragraph</p>
+            </section>
+        </div>
+    </body>
+</html>
