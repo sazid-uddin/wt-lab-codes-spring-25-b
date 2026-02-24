@@ -1,0 +1,7 @@
+<book-store>
+	<book category="Fiction">
+		<title>Harry Potter</title>
+		<Author>JK Rowling</Author>
+	</book>
+	<book></book>
+</book-store>
