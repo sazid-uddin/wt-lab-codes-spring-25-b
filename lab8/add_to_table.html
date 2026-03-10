@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<style>
+	table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th, td {
+		padding: 10px;
+		text-align: left;
+	}
+	</style>
+	<table>
+		<tr>
+			<th>Header 1</th>
+			<th>Header 2</th>
+		</tr>
+		<tr>
+			<td class="light">Row 1, Cell 1</td>
+			<td>Row 1, Cell 2</td>
+		</tr>
+		<tr>
+			<td>Row 2, Cell 1</td>
+			<td class="light">Row 2, Cell 2</td>
+		</tr>
+	</table>
+	<br>
+	<button onclick="addTableRow()">Add Table Row</button>
+	<script>
+		function addTableRow() {
+			// Step 1: Access table element in JS
+			var tables = document.getElementsByTagName("table"); // returns array of all tables
+			var table = tables[0]; // extract the table from tables array
+
+			// Step 2: Create new row element
+			var newRow = document.createElement("tr");
+			// <tr> </tr>
+
+			// Step 2.1: create a new table data
+			var td1 = document.createElement("td");
+			// <td></td>
+			td1.innerHTML="Row 3, Cell 1";
+			// <td>Row 3, Cell 1</td>
+
+			// Step 2.2: add table data to new row
+			newRow.appendChild(td1);
+			// <tr>
+			//	<td>Row 3, Cell 1</td>
+			// </tr>
+
+
+			// Step 2.3: create another new table data
+			var td2 = document.createElement("td");
+			// <td></td>
+			td2.innerHTML="Row 3, Cell 2";
+			// <td>Row 3, Cell 2</td>
+
+			// Step 2.4: add another table data to new row
+			newRow.appendChild(td2);
+			// <tr>
+			//	<td>Row 3, Cell 1</td>
+			//	<td>Row 3, Cell 2</td>
+			// </tr>
+
+			// Step 3: add new row to the existing table
+			table.appendChild(newRow);
+
+			// var lights = document.getElementsByClassName("light"); // return array of all elements that have class "light"
+			// document.getElementsByName()
+			// console.log(lights);
+			// document.getElementById() // return single element
+
+			// console.log(table);
+		}
+	</script>
+</body>
+</html>

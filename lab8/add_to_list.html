@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DOM Manipulation</title>
+</head>
+<body>
+	<p>Dynamic List:</p>
+	<ol id="list">
+		<li>First Item</li>
+		<li>Second Item</li>
+	</ol>
+	<button onclick="addListItem()">Add List Item</button>
+	<hr>
+	<p id="p1">Old Content</p>
+	<button onclick="addContent()">Add content to paragraph</button>
+	<script>
+		function addContent() {
+			var para = document.getElementById("p1");
+			para.innerHTML = "New Content";
+		}
+
+		function addListItem() {
+			var list = document.getElementById("list");
+			var count = list.childElementCount;
+
+			// Step 1: create the new list item to be added
+			var newListItem = document.createElement("li");
+			// <li></li>
+
+			// Step 2: Add text to newListItem
+			newListItem.innerHTML = "Item " + (count+1).toString();
+			// <li>Third Item</li>
+
+
+			// Step 3: add newly create list item to the list
+			list.appendChild(newListItem);
+		}
+	</script>
+
+</body>
+</html>
