@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<form onsubmit="return false;">
+		<input type="text" id="username" placeholder="username">
+	</form>	
+	<script>
+		var username_field = document.getElementById("username");
+		username_field.addEventListener("keyup", () => {
+			username_field.value = username_field.value.toUpperCase();
+		});
+	</script>
+</body>
+</html>

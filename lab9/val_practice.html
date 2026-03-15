@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	Quantity: <input type="number" id="quantity" placeholder="Quantity" value="0">	
+	<p>Unit price: 1000</p>
+	<p id="total_price">Total Price: 0</p>
+	<p id="error" style="color: red;"></p>
+	<script>
+		var quantity_field = document.getElementById("quantity");
+		function update() {
+			var total_price_para = document.getElementById("total_price");
+			var quantity = quantity_field.value;
+			if (quantity < 0) {
+				// quantity_field.value = 0;
+				document.getElementById("error").innerHTML = "Quantity cannot be negative";
+			} else {
+				document.getElementById("error").innerHTML = "";
+				total_price_para.innerHTML = "Total Price: " + (1000 * quantity);
+				if (1000*quantity > 1000) {
+					alert("You are now eligible for a coupon");
+				}
+			}
+		}
+		quantity_field.addEventListener("change", update);
+	</script>
+</body>
+</html>
